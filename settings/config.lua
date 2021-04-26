@@ -11,9 +11,9 @@ config.weathersync = {}
 
 config.messageDuration = 6000 -- global toast message duration in ms
 
-config.restrictMenu = true -- enables or disables (side-)menu for mods, spawning vehicles, tuning, environment, trackbuilder and replay
+config.restrictMenu = false -- enables or disables (side-)menu for mods, spawning vehicles, tuning, environment, trackbuilder and replay
 
-config.restrictActions = true -- enables or disables restricting actions globally (see below)
+config.restrictActions = false -- enables or disables restricting actions globally (see below)
 config.disabledActions = {
     "switch_next_vehicle", -- switches focus to next vehicle
     "switch_previous_vehicle", -- switches focus to previous vehicle
@@ -38,10 +38,10 @@ config.reset.message = "You can reset your vehicle in {secondsLeft} seconds." --
 config.reset.disabledMessage = "Vehicle resetting is disabled on this server." -- message shown when resetting is completely disabled
 
 config.motd.enabled = true -- enables or disables the motd
-config.motd.type = "selectableVehicle" -- htmlOnly: simple (large) motd || selectableVehicle: motd with the ability to select a vehicle
+config.motd.type = "htmlOnly" -- htmlOnly: simple (large) motd || selectableVehicle: motd with the ability to select a vehicle
 config.motd.title = "Welcome to a BeamMP server!"
 config.motd.description = [[
-    [img]uj_base/welcome.gif[/img]
+    [center][img]uj_base/welcome.gif[/img][/center]
     [br]
     [color=#808080]Current server time is: [i]{serverTime}[/i].[/color]
     [br]
@@ -52,7 +52,6 @@ config.motd.description = [[
         [*]Be respectful
         [*]Don't spam cars
     [/list]
-    [MEDIA=youtube]3PlBukazpo0[/media]
     [br]
     Expect many more futures to be added to Uncle Joey's Base in the future!
     [br][br]
