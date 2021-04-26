@@ -38,7 +38,7 @@ config.reset.message = "You can reset your vehicle in {secondsLeft} seconds." --
 config.reset.disabledMessage = "Vehicle resetting is disabled on this server." -- message shown when resetting is completely disabled
 
 config.motd.enabled = true -- enables or disables the motd
-config.motd.type = "htmlOnly" -- htmlOnly: simple (large) motd || selectableVehicle: motd with the ability to select a vehicle
+config.motd.type = "selectableVehicle" -- htmlOnly: simple (large) motd || selectableVehicle: motd with the ability to select a vehicle
 config.motd.title = "Welcome to a BeamMP server!"
 config.motd.description = [[
     [center][img]uj_base/welcome.gif[/img][/center]
