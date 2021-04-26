@@ -40,7 +40,11 @@ end
 local function spawnVehicle(model, options)
     local currentUserVehicle = be:getPlayerVehicle(0)
     if currentUserVehicle then
-        core_vehicles.replaceVehicle(model, options)
+        if MPVehicleGE.isOwn(currentUserVehicle:getID()) then
+            core_vehicles.replaceVehicle(model, options)
+        else
+            core_vehicles.spawnNewVehicle(model, options)
+        end
     else
         core_vehicles.spawnNewVehicle(model, options)
     end
@@ -49,7 +53,7 @@ end
 local function onScenarioUIReady(state)
     if state == "start" then
         enableMotd()
-    elseif state == "play" then
+    elseif state == "play" and config.motd.type == "selectableVehicle" then
         if not vehicleSpawned then
             spawnVehicle("pickup", {})
         end
